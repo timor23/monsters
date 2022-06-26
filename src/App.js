@@ -20,6 +20,8 @@ class App extends Component {
         }
     }
 
+    // something for something OMS
+
     componentDidMount() { //first time render
         console.log('componentDidMount')
         fetch('https://jsonplaceholder.typicode.com/users')
