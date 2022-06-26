@@ -37,13 +37,21 @@ class App extends Component {
         console.log('render')
 
         return (<div className="App">
-                <input className={'search-box'} type="search"/>
-                {this.state.monsters.map((monster) => {
-                    return (<div key={monster.id}>
-                        <h1 key={monster.id}>{monster.name}</h1>
-                    </div>)
-                })}
-            </div>);
+            <input className={'search-box'} type="search" placeholder={'search monsters'}
+                onChange={(event)=> {
+                    console.log(event.target.value)
+                    const filteredMonsters = this.state.monsters.filter((monster) => {
+                        const chunk = monster.name.slice(0,event.target.value.length)
+                        console.log(chunk)
+                        return (monster.name.)
+                    })
+                }}/>
+            {this.state.monsters.map((monster) => {
+                return (<div key={monster.id}>
+                    <h1 key={monster.id}>{monster.name}</h1>
+                </div>)
+            })}
+        </div>);
     }
 }
 
