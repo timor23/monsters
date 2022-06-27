@@ -43,7 +43,7 @@ class App extends Component {
                     const filteredMonsters = this.state.monsters.filter((monster) => {
                         const chunk = monster.name.slice(0,event.target.value.length)
                         console.log(chunk)
-                        return (monster.name.)
+                        return (event.target.value === chunk)
                     })
                 }}/>
             {this.state.monsters.map((monster) => {
