@@ -1,11 +1,11 @@
 import {Component} from "react";
 import './App.css';
+import CardList from "./Components/Card-list/Card-list.component";
 
 class App extends Component {
 
     constructor() {
         super();
-        console.log('constructor')
         this.state = {
             // monsters: [{
             //     name: 'Linda', id: '4356htgr'
@@ -24,7 +24,6 @@ class App extends Component {
     // something for something OMS
 
     componentDidMount() { //first time render
-        console.log('componentDidMount')
         fetch('https://jsonplaceholder.typicode.com/users')
             .then((res) => res.json())
             .then((users) => this.setState(() => {
@@ -52,12 +51,12 @@ class App extends Component {
                    placeholder={'search monsters'}
                    onChange={this.onSearchChange}/>
 
-
-            {this.state.monsters.map((monster) => {
-                return (<div key={monster.id}>
-                    <h1 key={monster.id}>{monster.name}</h1>
-                </div>)
-            })}
+            <CardList monsters={this.state.monsters} />
+            {/*{this.state.monsters.map((monster) => {*/}
+            {/*    return (<div key={monster.id}>*/}
+            {/*        <h1 key={monster.id}>{monster.name}</h1>*/}
+            {/*    </div>)*/}
+            {/*})}*/}
         </div>);
     }
 }
