@@ -8,15 +8,6 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            // monsters: [{
-            //     name: 'Linda', id: '4356htgr'
-            // }, {
-            //     name: 'Frank', id: '766gbd37g'
-            // }, {
-            //     name: 'Jacky', id: 'nhegf764e3t'
-            // }, {
-            //     name: 'Frank', id: 'ed3f4f4'
-            // }]
             monsters: [],
             allMonsters: []
         }
@@ -47,6 +38,7 @@ class App extends Component {
     render() {
         
         return (<div className="App">
+            <h1 className={'app-title'}>Monsters Rolosex</h1>
             <SearchBox
                 onChangeHandler={this.onSearchChange}
                 placeHolder={'search monsters'}
