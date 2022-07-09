@@ -1,17 +1,41 @@
-import {Component} from "react";
-import './card-list.css'
+import React, {useState, useEffect} from "react";
 import Card from "../Card/Card";
+import './card-list.css'
 
-class CardList extends Component {
-
-    render() {
-        const {monsters} = this.props
-        return (<div className={'card-list'}>
-            {monsters.map((monster) => {
-                return (<Card monster={monster}/>)
+const CardList = (props) => {
+    return (
+        <div className={'card-list'}>
+            {props.filteredMonsters.map((monster) => {
+                return (<Card monster={monster} />)
             })}
-        </div>)
-    }
-}
+        </div>
+    );
+};
 
-export default CardList
+export default CardList;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

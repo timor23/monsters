@@ -33,7 +33,8 @@ const App = () => {
                 placeHolder={'search monsters'}
                 className={'monsters-search-box'}
             />
-            <CardList monsters={monsters}/>
+
+            <CardList filteredMonsters={monsters}/>
         </div>
 
     );
